@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Test </title>
+</head>
+<body>
+    <script src="../Entities/Entity.js"></script>
+    <script src="../Entities/Project.js"></script>
+    <script src="../DAL/BaseDAO.js"></script>
+    <script src="../DAL/ProjectDAO.js"></script>
+    <script>
+        let projectDAO = new ProjectDAO()
+        let project = new Project()
+        project.name = "Test"
+        project.description = "Test"
+        projectDAO.create(project)
+        projectDAO.create(project)
+        
+        let projects = projectDAO.getAll()
+        console.log(projects)
+    </script>
+</body>
+</html>
